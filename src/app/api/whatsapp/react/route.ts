@@ -93,7 +93,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // WhatsApp config + access token
+    // WhatsApp config + Access_token
     const { data: config, error: configError } = await supabase
       .from('whatsapp_config')
       .select('phone_number_id, access_token')

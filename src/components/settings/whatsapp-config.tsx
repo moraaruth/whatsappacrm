@@ -136,7 +136,7 @@ export function WhatsAppConfig() {
       return;
     }
     if (!config && (!accessToken.trim() || !tokenEdited)) {
-      toast.error('Access Token is required for initial setup');
+      toast.error('Access_token is required for initial setup');
       return;
     }
 
@@ -160,7 +160,7 @@ export function WhatsAppConfig() {
         // server. But our POST handler requires an access_token to verify
         // with Meta. If the user didn't change the token, we need to signal
         // that. Simplest: require token re-entry if they're updating.
-        toast.error('Please re-enter the Access Token to save changes');
+        toast.error('Please re-enter the Access_token to save changes');
         setSaving(false);
         return;
       }
@@ -361,11 +361,11 @@ export function WhatsAppConfig() {
             </div>
 
             <div className="space-y-2">
-              <Label className="text-slate-300">Permanent Access Token</Label>
+              <Label className="text-slate-300">Permanent Access_token</Label>
               <div className="relative">
                 <Input
                   type={showToken ? 'text' : 'password'}
-                  placeholder="Enter your access token"
+                  placeholder="Enter your Access_token"
                   value={accessToken}
                   onChange={(e) => {
                     setAccessToken(e.target.value);
@@ -552,7 +552,7 @@ export function WhatsAppConfig() {
                     <li>Go to WhatsApp &gt; API Setup</li>
                     <li>Copy your <strong className="text-slate-200">Phone_number_ID</strong></li>
                     <li>Copy your <strong className="text-slate-200">WhatsApp Business Account ID</strong></li>
-                    <li>Generate a <strong className="text-slate-200">Permanent Access Token</strong> from Business Settings &gt; System Users</li>
+                    <li>Generate a <strong className="text-slate-200">Permanent Access_token</strong> from Business Settings &gt; System Users</li>
                   </ol>
                 </AccordionContent>
               </AccordionItem>
