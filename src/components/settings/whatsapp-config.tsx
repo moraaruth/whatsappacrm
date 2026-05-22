@@ -132,7 +132,7 @@ export function WhatsAppConfig() {
 
   async function handleSave() {
     if (!phoneNumberId.trim()) {
-      toast.error('Phone Number ID is required');
+      toast.error('Phone_number_ID is required');
       return;
     }
     if (!config && (!accessToken.trim() || !tokenEdited)) {
@@ -341,7 +341,7 @@ export function WhatsAppConfig() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label className="text-slate-300">Phone Number ID</Label>
+              <Label className="text-slate-300">Phone_number_ID</Label>
               <Input
                 placeholder="e.g. 100234567890123"
                 value={phoneNumberId}
@@ -550,7 +550,7 @@ export function WhatsAppConfig() {
                 <AccordionContent className="text-slate-400">
                   <ol className="list-decimal list-inside space-y-1 text-sm">
                     <li>Go to WhatsApp &gt; API Setup</li>
-                    <li>Copy your <strong className="text-slate-200">Phone Number ID</strong></li>
+                    <li>Copy your <strong className="text-slate-200">Phone_number_ID</strong></li>
                     <li>Copy your <strong className="text-slate-200">WhatsApp Business Account ID</strong></li>
                     <li>Generate a <strong className="text-slate-200">Permanent Access Token</strong> from Business Settings &gt; System Users</li>
                   </ol>

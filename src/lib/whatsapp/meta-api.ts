@@ -48,7 +48,7 @@ export interface VerifyPhoneNumberArgs {
 }
 
 /**
- * Verify a Meta phone number ID by fetching its public metadata
+ * Verify a Meta Phone_number_ID by fetching its public metadata
  * (display_phone_number, verified_name, quality_rating).
  */
 export async function verifyPhoneNumber(
