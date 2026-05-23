@@ -655,7 +655,7 @@ export function ContactDetailView({
                             <DollarSign className="size-3" />
                             {new Intl.NumberFormat('en-US', {
                               style: 'currency',
-                              currency: deal.currency || 'USD',
+                              currency: deal.currency || 'KSH',
                               maximumFractionDigits: 0,
                             }).format(Number(deal.value || 0))}
                           </span>

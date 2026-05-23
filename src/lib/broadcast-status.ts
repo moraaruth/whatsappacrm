@@ -10,7 +10,7 @@
 
 import type { BroadcastStatus, RecipientStatus } from "@/types";
 
-export interface StatusDisplay {
+export interface StatKSHisplay {
   label: string;
   classes: string;
   /**
@@ -20,7 +20,7 @@ export interface StatusDisplay {
   pulse?: boolean;
 }
 
-export const broadcastStatusConfig: Record<BroadcastStatus, StatusDisplay> = {
+export const broadcastStatusConfig: Record<BroadcastStatus, StatKSHisplay> = {
   draft: {
     label: "Draft",
     classes: "bg-slate-500/10 text-slate-400 border-slate-500/20",
@@ -44,7 +44,7 @@ export const broadcastStatusConfig: Record<BroadcastStatus, StatusDisplay> = {
   },
 };
 
-export const recipientStatusConfig: Record<RecipientStatus, StatusDisplay> = {
+export const recipientStatusConfig: Record<RecipientStatus, StatKSHisplay> = {
   pending: {
     label: "Pending",
     classes: "bg-slate-500/10 text-slate-400 border-slate-500/20",
@@ -76,14 +76,14 @@ export const recipientStatusConfig: Record<RecipientStatus, StatusDisplay> = {
  * coming from Supabase. Falls back to the "draft" / "pending"
  * entry so the UI never crashes on an unknown value.
  */
-export function getBroadcastStatus(status: string): StatusDisplay {
+export function getBroadcastStatus(status: string): StatKSHisplay {
   return (
     broadcastStatusConfig[status as BroadcastStatus] ??
     broadcastStatusConfig.draft
   );
 }
 
-export function getRecipientStatus(status: string): StatusDisplay {
+export function getRecipientStatus(status: string): StatKSHisplay {
   return (
     recipientStatusConfig[status as RecipientStatus] ??
     recipientStatusConfig.pending
