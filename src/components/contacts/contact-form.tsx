@@ -188,11 +188,11 @@ export function ContactForm({
               id="cf-phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              placeholder="+1 234 567 8900"
+              placeholder="+254712345678"
               className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500"
             />
             <p className="text-xs text-slate-500">
-              Include country code, e.g. +1 for US
+              Include country code, e.g. +254 for KE
             </p>
           </div>
 
